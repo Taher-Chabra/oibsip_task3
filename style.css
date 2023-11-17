@@ -33,24 +33,12 @@ body {
    border-radius: 10px;
    box-shadow: 0 0 13px #463f3f;
    max-width: 50%;
-   height: 80vh;
+   height: 75%;
    padding: 30px;
    display: flex;
    flex-direction: column;
    align-items: center;
    justify-content: space-evenly;
-}
-
-@media screen and (max-width: 786px) {
-   .temperature-board {
-      max-width: 60%;
-   }
-
-   #arrow {
-      display: none;
-   }
-
-
 }
 
 .selection-section, .input-screen, .result-section {
@@ -90,7 +78,6 @@ input[type="number"] {
 .select-temp {
    align-self: center;
    width: fit-content;
-   flex-wrap: wrap;
    display: flex;
    justify-content: space-evenly;
 }
@@ -155,7 +142,7 @@ input[type="number"] {
 }
 
 .description {
-   width: 100%;
+   width: max-content;
    margin-top: 1.2rem;
    font-size: 1.1rem;
    background-color: rgb(187, 255, 187);
@@ -163,3 +150,29 @@ input[type="number"] {
    border: 0.1rem solid green;
 }
 
+@media screen and (max-width: 830px) {
+   #arrow {
+      display: none;
+   }
+}
+
+@media screen and (max-width: 786px) {
+   .select-temp {
+      flex-wrap: wrap;
+   }
+
+   .temperature-board {
+      position: relative;
+      top: 20px;
+      bottom: 20px;
+      max-width: 90%;
+      height: 90%;
+   }
+
+   .form-floating>.form-control {
+      height: auto;
+      padding: 0.7rem;
+      font-size: 1.7rem;
+      width: 10rem;
+   }
+}
